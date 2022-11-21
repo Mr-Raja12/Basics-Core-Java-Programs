@@ -2,18 +2,24 @@ package com.bl.javapracticeproblems;
 import java.util.Scanner;
 public class VowelOrConsonent {
      public static void main(String[] args) {
-		char ch;
-		System.out.println("Enter any Character");
-		Scanner r=new Scanner(System.in);
-		ch=r.next().charAt(0);
-		
-		if(ch=='a' || ch=='A' ||ch=='e' || ch=='E'|| ch=='I'|| ch=='i'|| ch=='O'|| ch =='o'|| ch=='U'|| ch=='u')
-		{
-			System.out.println("Vowel");
-		}	
-		else
-		{
-			System.out.println("Consonent");
-		}
-	}
+         Scanner sc = new Scanner(System.in);
+         System.out.println("Enter an alphabet: ");
+         char c = sc.next().charAt(0);
+         switch (c) {
+             case 'a':
+             case 'e':
+             case 'i':
+             case 'o':
+             case 'u':
+             case 'A':
+             case 'E':
+             case 'I':
+             case 'O':
+             case 'U':
+                 System.out.println(c + " is a vowel.");
+                 break;
+             default:
+                 System.out.println(c + " is a consonant.");
+         }
+     }
 }
